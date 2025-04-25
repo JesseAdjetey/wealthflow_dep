@@ -14,7 +14,7 @@ const WalletConnect = () => {
     }
 
     try {
-      const provider = new ethers.BrowserProvider(window.ethereum as any);
+      const provider = new ethers.BrowserProvider(window.ethereum as never);
       const signer = await provider.getSigner();
       const walletAddress = await signer.getAddress();
       setAddress(walletAddress);

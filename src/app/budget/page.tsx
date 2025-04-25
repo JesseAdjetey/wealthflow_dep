@@ -86,7 +86,7 @@ export default function Budget() {
         // Fetch budget summary
         const [
           incomeValue,
-          dailyLimit,
+          ,
           needsAmount,
           wantsAmount,
           savingsAmount,
@@ -102,7 +102,7 @@ export default function Budget() {
 
           // Fetch sub-divisions for each category
           const fetchSubDivisions = async (category: string) => {
-            const [names, amounts, percentages, spent] =
+            const [names, amounts, , ] =
               await budgetContract.getSubDivisions(category);
 
             return names.map((name: string, index: number) => ({

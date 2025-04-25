@@ -46,7 +46,7 @@ export default function Dashboard() {
       const walletAddress = await signer.getAddress();
 
       // Fetch budget summary
-      const [incomeValue, dailyLimit, needsAmount, wantsAmount, savingsAmount] =
+      const [incomeValue, needsAmount, wantsAmount, savingsAmount] =
         await budgetContract.getBudgetSummary(walletAddress);
 
       // Set income
@@ -114,7 +114,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     fetchBudgetData();
-  }, []);
+  });
 
   // Navigate to the transaction page
   const handleGoToTransactions = () => {

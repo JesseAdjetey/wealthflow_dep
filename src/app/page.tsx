@@ -1,10 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import WalletConnect from "../app/components/WalletConnect";
 
 export default function Home() {
-  const router = useRouter();
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-6">
